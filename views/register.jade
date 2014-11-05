@@ -6,20 +6,47 @@ div(class="container")
             a(class="icon icon-logo" href="/")
             p Getting Started
         a(id="trigger-menu" class="icon icon-menu")
-    article(class="content")
+    article(class="started content")
         h1 How to Start
         p(class="date") Steps to Success
-        p <span>One of easiest ways to get started with CrossFit is to join a local gym. </span> Press the button below and type in your Zip Code to find a gym near you.
-        div(id="morphsearch" class="morphsearch")
-            div(class="morphsearch-form")
-                input(type="search" class="morphsearch-input" placeholder="Find a Gym")
-                a(class="icon icon-cross morphsearch-close")
-            div(class="morphsearch-content")
-                article(class="content results")
-                    p <span>Gainesville CrossFit</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
-                article(class="content results")
-                    p <span>Gainesville CrossFit</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
-                article(class="content results")
-                    p <span>Gainesville CrossFit</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
+        p <span>One of the easiest ways to get started with CrossFit is to join a local gym. </span> Type your Zip Code in the input below to find a gym near you.
+        div
+            div(class="container-search")
+                div(class="search-input")
+                    input(id="search" type="search" class="search" placeholder="Find a Gym")
+                a(class="icon icon-cross")
+    article(class="results content")
+        div(class="search-options")
+            h2 Results Nearby:
+            a(id="results-close" class="icon icon-cross")
+        p(class="date") Looks like we've found some matches! Select any gym below to see further details.
+        a(href="gym" class="gym")        
+            section(class="result")
+                img(class="result-img" src="/dist/images/crossfit-gym-1.jpg")
+                h3 Visionary CrossFit
+                p(class="result-tag") <span>1.6 miles</span> <br> 716 North Main Street <br> Gainesville, FL, 32601 <br> (787) 447-8503
+        a(href="gym" class="gym")    
+            section(class="result")
+                img(class="result-img" src="/dist/images/crossfit-gym-2.jpg")
+                h3 CrossFit Gainesville
+                p(class="result-tag") <span>2.2 miles</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
+        a(href="gym" class="gym")    
+            section(class="result")
+                img(class="result-img" src="/dist/images/crossfit-gym-3.jpg")
+                h3 Gator CrossFit
+                p(class="result-tag") <span>2.4 miles</span> <br> 6020 NW 4th Place Suite G <br> Gainesville, FL, 32607 <br> (352) 359-0889
+        a(href="gym" class="gym")    
+            section(class="result")
+                img(class="result-img" src="/dist/images/crossfit-gym-4.jpg")
+                h3 Dynasty CrossFit
+                p(class="result-tag") <span>2.8 miles</span> <br> 4010 NW 27th Lane <br> Gainesville, FL, 32606 <br> (352) 512-4038
+        a(href="gym" class="gym")    
+            section(class="result")
+                img(class="result-img" src="/dist/images/crossfit-gym-5.jpg")
+                h3 GHF CrossFit
+                p(class="result-tag") <span>3.2 miles</span> <br> 12830 SW 1st Lane, Suite 100 <br> Gainesville, FL, 32669 <br> (352) 215-2343
+        p(class="date") Trouble finding a gym? Find more information about alternatives <a class="link">here</a>.
+    article(class="alternative content")
+        p Otherwise, we have an alternative program where you can work out on your own. If this is something that interests you, <a class="link" href="http://www.crossfit.com/cf-info/start-how.html">check out the program.</a>
 
     include ./partials/footer.jade

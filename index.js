@@ -18,4 +18,8 @@ app.get('/register', function(req, res) {
     res.render('register.jade');
 });
 
+app.get('/gym', function(req, res) {
+    res.render('gym.jade');
+});
+
 app.listen(3000);

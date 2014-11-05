@@ -1,10 +1,12 @@
 include ./partials/header.jade
+div(class="container")
+    include ./partials/nav.jade
     header
         div(class="logo")
             a(class="icon icon-logo" href="/")
             p About Us
-        a(class="icon icon-menu")
-    article(class="content")
+        a(id="trigger-menu" class="icon icon-menu")
+    article(class="about content")
         h1 What is CrossFit?
         p(class="date") Forging Elite Fitness
         h2 CrossFit begins with a belief in fitness. The aim of CrossFit is to forge a broad, general and inclusive fitness. We have sought to build a program that will best prepare trainees for any physical contingency — not only for the unknown, but for the unknowable.

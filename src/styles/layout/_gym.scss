@@ -1,0 +1,115 @@
+.gym-feature {
+    background: #121212 url(/dist/images/crossfit-gym-1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 25px 50px 25px;
+    text-align: center;
+    
+
+    .icon-arrow-down {
+        display: none;
+        z-index: 150;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    a {
+        color: #ffffff;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    .gym-options, .gym-copy {
+        position: relative;
+        z-index: 100;
+        text-align: left;
+        display: none;
+    }
+
+    .gym-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.information {
+    background: #F7F7F7;
+    padding: 15px;
+}
+
+.gym-info {
+    margin-top: 0;
+    width: 100%;
+
+    .content {
+        h1 {
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+.gym {
+    color: #343434;
+
+    .result h3 {
+        margin-top: 15px;
+        font-size: 1.2em;
+    }
+
+    .result-tag {
+        font-size: .9em;
+    }
+}
+
+.team {
+    margin-top: 0;
+    text-align: center;
+
+    .member {
+        margin-bottom: 50px;
+    }
+
+    .member-img {
+        display: inline-block;
+        border-radius: 50%;
+        height: 125px;
+        width: 125px;
+    }
+
+    .member-name {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 1.8em;
+    }
+
+    .member-info {
+        display: inline-block;
+        font-size: .8em;
+        margin-bottom: 15px;
+    }
+
+    .member-description {
+        text-align: left;
+    }
+}

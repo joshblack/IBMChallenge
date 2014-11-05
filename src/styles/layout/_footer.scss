@@ -6,6 +6,12 @@ footer {
     .logo {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        li {
+            display: inline-block;
+            margin: 0 5px;
+        }
     }
 
     p {

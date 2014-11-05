@@ -1,66 +1,110 @@
-var CROSSFIT = window.CROSSFIT || {};
+$(document).ready(function () {
+    // Menu Operations
+    $('#trigger-menu').on('click', function() {
+        $('#menu').show();
+        $('.container').addClass('menu-push');
+    });
 
-$('#trigger-menu').on('click', function() {
-    $('#menu').show();
-    $('.container').addClass('menu-push');
+    $('#menu-close').on('click', function() {
+        $('.container').removeClass('menu-push');
+        setTimeout(function() {
+            $('#menu').hide();
+        }, 350);
+    });
+
+    // Search Operations
+    $('#search').on('focus', function () {
+        var $searchOptions = $('.search-options');
+
+        $('.results').show();
+        $searchOptions.show();
+        $searchOptions.css('opacity', 1);
+
+        $searchOptions.children().velocity('transition.slideLeftIn', { stagger: 100, drag: true });
+    });
+
+    $('#search').on('keyup', function () {
+        $('.results').children().not('.search-options')
+            .velocity('transition.slideUpBigIn', { stagger: 100, drag: true });
+    });
+
+    if ($('#results-close').length > 0) {
+        $('#results-close').on('click', function () {
+            $('.results').children().velocity('transition.slideLeftOut', { stagger: 100, drag: true });
+        });
+    }
 });
 
-$('#menu-close').on('click', function() {
-    $('.container').removeClass('menu-push');
-    setTimeout(function() {
-        $('#menu').hide();
-    }, 350);
-});
+// Trigger our animations once the window loads
+$(window).load(function () {
+    if ($('.gym-feature').length > 0) {
 
+        setTimeout(function () {
+            $('.gym-copy').velocity('transition.slideUpBigIn', { stagger: 100, drag: true });
+            $('.icon-arrow-down').velocity('transition.slideUpBigIn', { drag: true });
+        }, 1000);
 
+        setTimeout(function () {
+            $('.icon-arrow-down').velocity('callout.bounce', { drag: true });
+        }, 1500);
 
-if ($('#morphsearch').length > 0) {
-    $('.content.results').hide();
-    (function() {
-        var morphSearch = document.getElementById( 'morphsearch' ),
-            input = morphSearch.querySelector( 'input.morphsearch-input' ),
-            ctrlClose = morphSearch.querySelector( '.morphsearch-close' ),
-            isOpen = isAnimating = false,
-            // show/hide search area
-            toggleSearch = function(evt) {
-                // return if open and the input gets focused
-                if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
-                var offsets = morphsearch.getBoundingClientRect();
-                if( isOpen ) {
-                    classie.remove( morphSearch, 'open' );
-                    // trick to hide input text once the search overlay closes 
-                    // todo: hardcoded times, should be done after transition ends
-                    if( input.value !== '' ) {
-                        setTimeout(function() {
-                            classie.add( morphSearch, 'hideInput' );
-                            setTimeout(function() {
-                                classie.remove( morphSearch, 'hideInput' );
-                                input.value = '';
-                            }, 300 );
-                        }, 500);
+        $('.icon-arrow-down').on('click', function () {
+            $.scrollTo('section', 800);
+        });
+    }
+
+    if ($('.about').length > 0) {
+        $('.about').children().hide();
+        $('.about').show();
+        $('.logo p').hide();
+
+        setTimeout(function () {
+            $('.logo p').velocity('transition.slideLeftIn', { drag: true });
+        }, 300);
+
+        setTimeout(function () {
+            $('.about.content').children()
+                .velocity('transition.slideUpBigIn', { 
+                    stagger: 100, 
+                    drag: true,
+                    complete: function () {
+                        $('footer').show();
                     }
-                    
-                    input.blur();
-                }
-                else {
-                    classie.add( morphSearch, 'open' );
-                }
-                isOpen = !isOpen;
-            };
-        // events
+                });
+        }, 600)
+    }
 
-        input.addEventListener( 'focus', toggleSearch );
-        ctrlClose.addEventListener( 'click', toggleSearch );
+    if ($('.started.content').length > 0) {
+        var $started = $('.started'),
+            $alternative = $('.alternative'),
+            $results = $('.results');
 
-        // esc key closes search overlay
-        // keyboard navigation events
-        document.addEventListener( 'keydown', function( ev ) {
-            var keyCode = ev.keyCode || ev.which;
-            if( keyCode === 27 && isOpen ) {
-                toggleSearch(ev);
-            }
-        } );
-        /***** for demo purposes only: don't allow to submit the form *****/
-        // morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
-    })();
-}
+        // Get ready to animate started's children
+        $started.children().hide();
+        $started.show();
+
+        // Same for alternative
+        $alternative.children().hide();
+        $alternative.show();
+
+        $results.children().hide();
+        $results.find('.search-options').children().hide();
+        $results.find('.search-options').show();
+
+        setTimeout(function () {
+            $('.logo p').velocity('transition.slideLeftIn', { drag: true });
+        }, 300);
+
+        setTimeout(function () {
+            $started.children().velocity('transition.slideUpBigIn', { stagger: 50, drag: true });
+            $alternative.children().velocity('transition.slideUpBigIn', { stagger: 50, drag: true });
+        }, 600)
+
+        setTimeout(function () {
+            $('footer').velocity('transition.slideUpBigIn', { stagger: 100, drag: true });
+        }, 2000);
+    }
+});
+
+
+

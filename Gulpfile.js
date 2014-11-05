@@ -22,6 +22,8 @@ var rename = require('gulp-rename');
 var consolidate = require('gulp-consolidate');
 var lodash = require('lodash');
 
+var imagemin = require('gulp-imagemin');
+
 var paths = {
     styles: ['src/styles/**/*.scss'],
     scripts: ['src/scripts/**/*.js']
@@ -96,7 +98,15 @@ gulp.task('icons', function() {
                 .pipe(gulp.dest('src/styles/base/'));
         })
         .pipe(gulp.dest('dist/fonts/'));
-})
+});
+
+gulp.task('images', function () {
+    return gulp.src('src/images/*')
+        .pipe(imagemin({
+            progressive: true    
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
 
 gulp.task('watch', function() {
     gulp.watch(paths.styles, ['styles']);

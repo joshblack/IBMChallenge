@@ -8,3 +8,11 @@ article.content {
         margin: 0 0 5px 15px;
     }
 }
+
+.about {
+    display: none;
+}
+
+.about ~ footer {
+    display: none;
+}

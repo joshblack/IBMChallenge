@@ -1,0 +1,39 @@
+include ./partials/header.jade
+div(class="container")
+    include ./partials/nav.jade
+    div(class="gym-feature")
+        div(class="gym-options")
+            a(class="icon icon-logo" href="/")
+            a(id="trigger-menu" class="icon icon-menu")
+        div(class="gym-copy")
+            h1(class="gym-copy_title") Visionary CrossFit
+            a(href="/register" class="gym-copy_button") We believe in training our minds and bodies to be resilient, to overcome what life throws at us, and to achieve any goal we desire.
+        a(class="icon icon-arrow-down")
+    section
+        article(class="gym-info")
+            section(class="information")
+                h1 Visionary Crossfit
+                p(class="date") Hours: 8:00 AM - 10:00 PM
+                p 1126 NW 2nd Street <br> Gainesville, FL, 32601 <br> (352) 215-8609
+            article(class="content")
+                ul(class="team")
+                    li 
+                        h1 Our Team
+                    li(class="member")
+                        img(class="member-img" src="/dist/images/member-1.jpg")
+                        h2(class="member-name") Danielle Bodin
+                        a(class="member-info") danielle@crossfitgainesville.com <br> 455-478-3399
+                        p(class="member-description") Growing up Danielle was always into sports, and after 10 years as a competitive gymnast she knew that physical activity was her passion. She began coaching the competition team as soon as she was old enough and continued coaching through getting her bachelors degree in Kinesiology-Fitness Studies at Louisiana State University and her certification in Cardiac and Vascular Ultrasound. She had heard about crossfit through her studies but there were not many at this time and none in Louisiana. 
+                        p(class="member-description") Once she graduated, she accepted a job in Gainesville performing ultrasound in 2009 and became a member at CFG as soon as she arrived. 2 years later she left to fulfill her goal of speaking French, and moved to Paris. Where she helped CrossFit grow by helping to open an affiliate and eventually coaching at Reebok CrossFit Louvre. Now, she is back and is excited to be a part of CFG again as a coach this time! 
+                    li(class="member")
+                        img(class="member-img" src="/dist/images/member-2.jpg")
+                        h2(class="member-name") Matt Nations
+                        a(class="member-info") tperry@skimia.info <br> 455-478-3399
+                        p(class="member-description") A native of Gainesville, he joined the U.S. Navy in 1999 where he began CrossFit in 2007. In 2009 he separated from the Navy and moved back to Gainesville so he could spend time with his wife and daughter
+                        p(class="member-description") Since he started CrossFit he has searched for any and all resources he could find to better himself and those around him.
+                h1 Our Vision
+                p <span>We see our company as apart of your life. </span> A place where you can focus on yourself, learn useful skills, forget about outside obligations and distractions, and truly develop your mind and body to be a better you. 
+                p We believe in our <em><strong>principals</strong></em>, <em><strong>core values</strong></em>, and <em><strong>educated</strong></em> approaches to achieve results. We value hard work and quality, education and above all the relationships with our company. We believe in regularly asking ourselves if there is a better way to deliver results, our messages and approaches, and services. 
+                p It is important that we stay true to our beliefs, so that we can deliver our very best each day and wake up each morning to do it over again.
+                a(href="mailto:joshuatblack@ufl.edu") <button>Contact Us</button>
+    include ./partials/footer.jade
