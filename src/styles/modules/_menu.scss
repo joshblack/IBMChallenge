@@ -1,0 +1,103 @@
+#menu {
+    display: none;
+    position: absolute;
+    right: -280px;
+    width: 280px;
+    background: #121212;
+    color: #ffffff;
+    height: 100vh;
+    padding: 20px;
+
+    h2 {
+        font-family: $sans-serif;
+    }
+
+    li {
+        margin: 25px auto 25px 45px;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: bold;
+        font-family: $sans-serif;
+        font-size: 18px;
+        transition: 0.2s all;
+    }
+
+    a:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    a:active {
+        color: #ffffff;
+    }
+
+    .subtle {
+
+        li {
+            margin: 5px;
+            margin-left: 45px;
+        }
+
+        a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.3);
+            transition: 0.2s all;
+        }
+
+        a:active {
+            color: #ffffff;
+        }
+    }
+
+    .social {
+        width: 65%;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
+    .social ul {
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .social li {
+        margin: 0;
+        transition: 0.2s all;
+    }
+
+    .social li:active {
+        color: #ffffff;
+    }
+}
+
+.menu-push {
+    transform: translateX(-280px);
+}
+
+.menu-close {
+    transform: translateX(280px);
+}
+
+.menu-options {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    
+    .icon-cross {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1em;
+        margin: 0;
+        line-height: 42.5px;
+    }
+
+    .icon-cross:hover {
+        color: #ffffff;
+    }
+}
+
+.container {
+    transition: 0.3s transform ease-in-out;
+}

@@ -1,4 +1,13 @@
 include ./partials/header.jade
-body
-    h1 Hello World
-    include ./partials/footer.jade
+div(class="main container")
+    include ./partials/nav.jade
+    div(class="main-feature")
+        div(class="main-options")
+            a(class="icon icon-logo" href="/")
+            a(id="trigger-menu" class="icon icon-menu")
+        div(class="feature-copy")
+            h1(class="feature-copy_title") DO YOU CROSSFIT?
+            a(href="/register" class="feature-copy_button") GET STARTED
+            br
+            a(href="/about" class="feature-copy_subtitle") About us
+    script(src="./dist/scripts/app.js")

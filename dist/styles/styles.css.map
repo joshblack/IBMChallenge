@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAoFA,EAAG;EAAE,UAAU,EAAE,KAAK;;ACJtB,IAAK;EAAE,UAAU,EAAE,KAAK",
-"sources": ["../bourbon/addons/_triangle.scss","../bourbon/_bourbon.scss"],
-"names": [],
-"file": "styles.css"
-}

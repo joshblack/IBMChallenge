@@ -1,0 +1,25 @@
+include ./partials/header.jade
+div(class="container")
+    include ./partials/nav.jade
+    header
+        div(class="logo")
+            a(class="icon icon-logo" href="/")
+            p Getting Started
+        a(id="trigger-menu" class="icon icon-menu")
+    article(class="content")
+        h1 How to Start
+        p(class="date") Steps to Success
+        p <span>One of easiest ways to get started with CrossFit is to join a local gym. </span> Press the button below and type in your Zip Code to find a gym near you.
+        div(id="morphsearch" class="morphsearch")
+            div(class="morphsearch-form")
+                input(type="search" class="morphsearch-input" placeholder="Find a Gym")
+                a(class="icon icon-cross morphsearch-close")
+            div(class="morphsearch-content")
+                article(class="content results")
+                    p <span>Gainesville CrossFit</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
+                article(class="content results")
+                    p <span>Gainesville CrossFit</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
+                article(class="content results")
+                    p <span>Gainesville CrossFit</span> <br> 1126 NW 2nd St <br> Gainesville, FL, 32601 <br> (352) 215-8609
+
+    include ./partials/footer.jade

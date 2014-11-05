@@ -1,0 +1,21 @@
+footer {
+    background: #121212;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 25px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        margin-bottom: 0;
+        margin-left: 15px;
+        font-size: .8em;
+    }
+
+    .icon {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1em;
+    }
+}
