@@ -2,7 +2,7 @@
 
 > Josh Black
 
-Hello IBM Design team! In this folder is my submission for the IBM Design Challenge. I had a lot of with this assignment and I hope you enjoy what I ended up making!
+Hello IBM Design team! In this folder is my submission for the IBM Design Challenge. I had a lot of fun with this assignment and I hope you enjoy what I ended up making!
 
 In order to complete this challenge, I leveraged the following tools and technologies:
 
