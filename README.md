@@ -2,7 +2,9 @@
 
 > Josh Black
 
-Hello IBM Design team! I had a lot of fun putting together this project, I hope you all enjoy it as well. I leveraged the following tools and technologies in order to put this challenge together:
+Hello IBM Design team! In this folder is my submission for the IBM Design Challenge. I had a lot of with this assignment and I hope you enjoy what I ended up making!
+
+In order to complete this challenge, I leveraged the following tools and technologies:
 
 - CSS
     - Sass
@@ -22,7 +24,7 @@ Hello IBM Design team! I had a lot of fun putting together this project, I hope 
 In order to view this project, simply do the following:
 
 1. `git clone https://github.com/joshblack/IBMChallenge.git` or unzip the submitted folder
-2. `cd IBMChallenge-master`, or whatever the folder name is called
+2. `cd IBMChallenge`, or whatever the folder name is called
 3. `npm install --production`, for node dependencies
 3. `node index.js`, the home page will be available at `localhost:3000`.
 4. Tested on the iPhone 5 and HTC One. Preferred viewport width is less than 480px.
