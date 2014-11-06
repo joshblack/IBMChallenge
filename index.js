@@ -22,5 +22,7 @@ app.get('/gym', function(req, res) {
     res.render('gym.jade');
 });
 
+app.set('port', (process.env.PORT || 3000))
+
 console.log('Currently running at: http://localhost:3000');
-app.listen(3000);
+app.listen(app.get('port'));
